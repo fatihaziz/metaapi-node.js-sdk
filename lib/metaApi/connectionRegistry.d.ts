@@ -3,6 +3,7 @@ import ClientApiClient from "../clients/metaApi/clientApi.client";
 import HistoryStorage from "./historyStorage";
 import MetatraderAccount from "./metatraderAccount";
 import StreamingMetaApiConnection from "./streamingMetaApiConnection";
+import RpcMetaApiConnection from "./rpcMetaApiConnection";
 
 /**
  * Manages account connections
@@ -17,7 +18,7 @@ export default class ConnectionRegistry {
    * @param {string} refreshSubscriptionsOpts subscriptions refresh options
    */
   constructor(metaApiWebsocketClient: MetaApiWebsocketClient, clientApiClient: ClientApiClient, application: string, refreshSubscriptionsOpts: string);
-  
+
   /**
    * Creates and returns a new account streaming connection if doesnt exist, otherwise returns old
    * @param {MetatraderAccount} account MetaTrader account id to connect to

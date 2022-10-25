@@ -9,6 +9,7 @@ import RpcMetaApiConnection from "./rpcMetaApiConnection";
 import ExpertAdvisor from "./expertAdvisor";
 import StreamingMetaApiConnection from "./streamingMetaApiConnection";
 import MetatraderAccountReplica from './metatraderAccountReplica';
+import RpcMetaApiConnectionInstance from "./rpcMetaApiConnectionInstance";
 
 /**
  * Implements a MetaTrader account entity
@@ -25,9 +26,9 @@ export default class MetatraderAccount {
    * @param {HistoricalMarketDataClient} historicalMarketDataClient historical market data HTTP API client
    * @param {string} application application name
    */
-  constructor(data: MetatraderAccountDto, metatraderAccountClient: MetatraderAccountClient, metaApiWebsocketClient: MetaApiWebsocketClient, connectionRegistry: ConnectionRegistry, expertAdvisorClient: ExpertAdvisorClient, 
+  constructor(data: MetatraderAccountDto, metatraderAccountClient: MetatraderAccountClient, metaApiWebsocketClient: MetaApiWebsocketClient, connectionRegistry: ConnectionRegistry, expertAdvisorClient: ExpertAdvisorClient,
     historicalMarketDataClient: HistoricalMarketDataClient, application: string);
-  
+
   /**
    * Returns account id
    * @return {string} account id
@@ -282,7 +283,7 @@ export default class MetatraderAccount {
    * Connects to MetaApi via RPC connection.
    * @returns {RpcMetaApiConnection} MetaApi connection
    */
-  getRPCConnection(): RpcMetaApiConnection;
+  getRPCConnection(): RpcMetaApiConnectionInstance;
   
   /**
    * Updates MetaTrader account data

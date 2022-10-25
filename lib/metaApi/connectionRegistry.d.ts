@@ -4,6 +4,7 @@ import HistoryStorage from "./historyStorage";
 import MetatraderAccount from "./metatraderAccount";
 import StreamingMetaApiConnection from "./streamingMetaApiConnection";
 import RpcMetaApiConnection from "./rpcMetaApiConnection";
+import RpcMetaApiConnectionInstance from "./rpcMetaApiConnectionInstance";
 
 /**
  * Manages account connections
@@ -39,7 +40,7 @@ export default class ConnectionRegistry {
    * @param {MetatraderAccount} account MetaTrader account id to connect to
    * @returns {RpcMetaApiConnection} rpc metaapi connection
    */
-  connectRpc(account: MetatraderAccount): RpcMetaApiConnection;
+  connectRpc(account: MetatraderAccount): RpcMetaApiConnectionInstance;
 
   /**
    * Removes an RPC connection from registry

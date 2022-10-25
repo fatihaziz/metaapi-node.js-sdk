@@ -65,7 +65,7 @@ export default class ConnectionRegistry {
     if (!this._rpcConnections[account.id]) {
       this._rpcConnections[account.id] = new RpcMetaApiConnection(this._metaApiWebsocketClient, account, this);
     }
-    return new RpcMetaApiConnectionInstance(this._metaApiWebsocketClient, 
+    return new RpcMetaApiConnectionInstance(this._metaApiWebsocketClient,
       this._rpcConnections[account.id]);
   }
 

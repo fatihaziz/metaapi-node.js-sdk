@@ -3,6 +3,7 @@ import MetaApiWebsocketClient, {
     MarginOrder, MetatraderTradeResponse,
     TrailingStopLoss
 } from "../clients/metaApi/metaApiWebsocket.client";
+import MetaApiConnection from "./metaApiConnection";
 import MetatraderAccount from "./metatraderAccount";
 
 /**
